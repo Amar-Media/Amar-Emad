@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amar Emadaldeen | Amar Media</title>
+<meta name="description" content="Amar Media — Video Editor & Reels Creator. Commercial & school content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#141414;--line:#2a2418;--gold:#c9a24b;--gold2:#f0d58a;--text:#ece5d3;--mute:#9a927f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* top bar */
+header{position:fixed;inset:0 0 auto 0;z-index:10;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:900;font-size:22px;letter-spacing:.18em;color:var(--gold)}
+nav{display:flex;gap:22px;font-weight:700;font-size:15px}
+nav a:hover{color:var(--gold2)}
+.tools{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--mute)}
+#clock{font-variant-numeric:tabular-nums;color:var(--text);direction:ltr}
+#lang{background:none;border:1px solid var(--gold);color:var(--gold);padding:2px 12px;font:inherit;font-weight:700;cursor:pointer;border-radius:2px}
+#lang:hover{background:var(--gold);color:#000}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:60px;
+  background:radial-gradient(ellipse at 70% 40%,#2b2210 0,#000 60%)}
+.hero h1{font-size:clamp(64px,17vw,210px);font-weight:900;line-height:.95;letter-spacing:.06em;color:var(--gold);direction:ltr;text-align:start}
+.hero-grid{display:grid;grid-template-columns:1.3fr .8fr;gap:40px;align-items:center}
+.who{font-size:clamp(22px,3vw,32px);font-weight:700;margin-top:10px;direction:ltr;text-align:start}
+.badge{display:inline-block;margin-top:16px;border:1px solid var(--gold);color:var(--gold);padding:2px 14px;font-weight:700;font-size:14px}
+.portrait{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 25%;border:2px solid var(--gold);box-shadow:12px 12px 0 var(--line)}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.portrait{max-width:340px}}
+.hero p.role{font-size:clamp(20px,3vw,34px);font-weight:700;margin-top:18px}
+.hero p.sub{max-width:560px;color:var(--mute);margin-top:12px;font-size:18px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-block;padding:13px 30px;font-weight:900;border:2px solid var(--gold);cursor:pointer;font-family:inherit;font-size:16px;transition:.2s;border-radius:2px}
+.btn.fill{background:var(--gold);color:#000}
+.btn.fill:hover{background:var(--gold2);border-color:var(--gold2)}
+.btn.ghost{background:none;color:var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:#000}
+
+section{padding:96px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(34px,6vw,64px);font-weight:900;line-height:1.1;margin-bottom:36px}
+
+/* work */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.tile{position:relative;aspect-ratio:9/12;background:linear-gradient(160deg,#1d1810,#0a0a0a);border:1px solid var(--line);overflow:hidden;display:flex;align-items:flex-end}
+.tile img,.tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile span{position:relative;width:100%;padding:34px 16px 14px;font-weight:700;background:linear-gradient(transparent,rgba(0,0,0,.9))}
+.tile:hover{border-color:var(--gold)}
+.note{color:var(--mute);margin-top:18px;font-size:14px}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border:1px solid var(--line)}
+.svc div{padding:30px 24px;border:1px solid var(--line)}
+.svc h3{color:var(--gold);font-size:24px;margin-bottom:6px}
+.svc p{color:var(--mute)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media(max-width:800px){.contact{grid-template-columns:1fr}nav{display:none}}
+label{display:block;font-weight:700;margin:14px 0 4px}
+input,select,textarea{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:12px;font:inherit;border-radius:2px}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
+.links a{display:block;font-size:22px;font-weight:700;margin:10px 0;direction:ltr;text-align:start}
+.links a:hover{color:var(--gold2)}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--mute);text-align:center;font-size:14px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">AMMAR</a>
+    <nav>
+      <a href="#work" data-i="nav_work"></a>
+      <a href="#services" data-i="nav_services"></a>
+      <a href="#contact" data-i="nav_contact"></a>
+    </nav>
+    <div class="tools">
+      <span><span data-i="sudan"></span> <span id="clock">--:--</span></span>
+      <button id="lang" type="button">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+      <h1>AMMAR</h1>
+      <p class="who">Amar Emadaldeen</p>
+      <p class="role" data-i="role"></p>
+      <p class="sub" data-i="tag"></p>
+      <span class="badge" data-i="iphone"></span>
+      <div class="btns">
+        <a class="btn fill" href="#contact" data-i="cta1"></a>
+        <a class="btn ghost" href="#work" data-i="cta2"></a>
+      </div>
+      </div>
+      <img class="portrait" src="amar.jpg" alt="Amar Emadaldeen">
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <h2 data-i="work"></h2>
+      <div class="grid">
+        <!-- Replace each tile: add <img src="photo.jpg" alt=""> or <video src="reel.mp4" muted loop playsinline autoplay></video> before the <span> -->
+        <div class="tile"><span data-i="t1"></span></div>
+        <div class="tile"><span data-i="t2"></span></div>
+        <div class="tile"><span data-i="t3"></span></div>
+        <div class="tile"><span data-i="t4"></span></div>
+      </div>
+      <p class="note" data-i="note"></p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2 data-i="svc"></h2>
+      <div class="svc">
+        <div><h3 data-i="s1"></h3><p data-i="s1d"></p></div>
+        <div><h3 data-i="s2"></h3><p data-i="s2d"></p></div>
+        <div><h3 data-i="s3"></h3><p data-i="s3d"></p></div>
+        <div><h3 data-i="s4"></h3><p data-i="s4d"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2 data-i="contact"></h2>
+        <p data-i="contact_p" style="color:var(--mute);margin-bottom:20px"></p>
+        <div class="links">
+          <a href="https://wa.me/249997182853" target="_blank" rel="noopener">WhatsApp +249 99 718 2853</a>
+          <a href="https://www.instagram.com/amar_media35" target="_blank" rel="noopener">Instagram @amar_media35</a>
+        </div>
+      </div>
+      <div>
+        <label for="n" data-i="f_name"></label>
+        <input id="n" autocomplete="name">
+        <label for="s" data-i="f_service"></label>
+        <select id="s">
+          <option data-i="s1"></option><option data-i="s2"></option>
+          <option data-i="s3"></option><option data-i="s4"></option>
+        </select>
+        <label for="m" data-i="f_msg"></label>
+        <textarea id="m" rows="4"></textarea>
+        <button class="btn fill" id="send" type="button" style="margin-top:20px" data-i="send"></button>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© <span id="y"></span> Amar Media</footer>
+
+<script>
+const T={
+ar:{nav_work:"أعمالي",iphone:"تصوير بالآيفون",nav_services:"الخدمات",nav_contact:"تواصل",sudan:"توقيت السودان",
+role:"مونتير فيديو وصانع ريلز",tag:"نحوّل أفكارك إلى فيديوهات تجذب العملاء. محتوى تجاري ومدرسي.",
+cta1:"اطلب خدمة",cta2:"شاهد الأعمال",work:"أعمال مختارة",
+t1:"ريلز إعلاني",t2:"إعلان تجاري",t3:"محتوى مدرسي",t4:"تصوير فوتوغرافي",
+note:"استبدل هذه المربعات بصورك وفيديوهاتك.",
+svc:"الخدمات",s1:"ريلز",s1d:"فيديوهات قصيرة مصممة لتوقف المشاهد وتجذب العملاء.",
+s2:"إعلانات فيديو",s2d:"إعلانات لمنتجك أو نشاطك من الفكرة حتى التسليم.",
+s3:"محتوى مدرسي",s3d:"تصوير ومونتاج لمدارس ومؤسسات تعليمية.",
+s4:"تصوير فوتوغرافي",s4d:"صور احترافية للمنتجات والفعاليات والمناسبات.",
+contact:"اطلب خدمتك",contact_p:"أرسل طلبك وسيصلني مباشرة على واتساب.",
+f_name:"الاسم",f_service:"الخدمة",f_msg:"تفاصيل الطلب",send:"أرسل عبر واتساب",
+wa:"مرحباً، اسمي {n}. أريد خدمة: {s}.\n{m}"},
+en:{nav_work:"Work",iphone:"Shot on iPhone",nav_services:"Services",nav_contact:"Contact",sudan:"Sudan time",
+role:"Video Editor & Reels Creator",tag:"Turning your ideas into videos that attract clients. Commercial and school content.",
+cta1:"Request a service",cta2:"See the work",work:"Selected work",
+t1:"Reel — advertising",t2:"Commercial ad",t3:"School content",t4:"Photography",
+note:"Replace these tiles with your photos and videos.",
+svc:"Services",s1:"Reels",s1d:"Short videos built to stop the scroll and bring in clients.",
+s2:"Video ads",s2d:"Ads for your product or business, from idea to delivery.",
+s3:"School content",s3d:"Filming and editing for schools and educational institutions.",
+s4:"Photography",s4d:"Professional photos for products, events and occasions.",
+contact:"Request a service",contact_p:"Send your request and it reaches me directly on WhatsApp.",
+f_name:"Name",f_service:"Service",f_msg:"Project details",send:"Send on WhatsApp",
+wa:"Hello, my name is {n}. I'd like: {s}.\n{m}"}
+};
+let L="ar";
+function apply(){
+  document.documentElement.lang=L;document.documentElement.dir=L==="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=T[L][e.dataset.i]);
+  document.getElementById("lang").textContent=L==="ar"?"EN":"عربي";
+}
+document.getElementById("lang").onclick=()=>{L=L==="ar"?"en":"ar";apply()};
+apply();
+
+function tick(){
+  document.getElementById("clock").textContent=new Intl.DateTimeFormat("en-GB",{timeZone:"Africa/Khartoum",hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date());
+}
+tick();setInterval(tick,15000);
+document.getElementById("y").textContent=new Date().getFullYear();
+
+document.getElementById("send").onclick=()=>{
+  const n=document.getElementById("n").value.trim(),
+        s=document.getElementById("s").value,
+        m=document.getElementById("m").value.trim();
+  const text=T[L].wa.replace("{n}",n).replace("{s}",s).replace("{m}",m);
+  window.open("https://wa.me/249997182853?text="+encodeURIComponent(text),"_blank");
+};
+</script>
+</body>
+</html>
